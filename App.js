@@ -6,11 +6,13 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import HomePage from './homepage'
 import FolderContent from './foldercontent';
 import Frontpage from './frontpage';
-export default function App() {
-  return (
+
+export default function App(props){
+  return(
     <AppContainer />
-    );
+  );
 }
+
 const sn = createSwitchNavigator({
   Frontpage:Frontpage,
 SignIn:SignIn,

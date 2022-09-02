@@ -7,7 +7,7 @@ export default function Google_Tag(props){
     const [color,setColor] = useState('#3275A6')
     return(
         <View style={{backgroundColor:color,borderRadius:10}}>
-        <div style={{float:'left',width:240,height:220,fontWeight:'bold',color:'white',alignContent:'center',alignItems:'center'}} >
+        <div style={{float:'left',width:180,height:220,fontWeight:'bold',color:'white',alignContent:'center',alignItems:'center'}} >
             <a target={'_parent'}  style={{marginLeft:'80px',marginBottom :'190px'}} href={props.link}><p style={{'color':'white'}}>{props.val}</p></a><br></br>
             <p><button style={{'border':'none',backgroundColor:"#3275A6"}}onClick={
                 props.clickfunction

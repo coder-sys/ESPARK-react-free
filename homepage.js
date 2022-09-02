@@ -9,7 +9,8 @@ import Particles from 'react-tsparticles';
 
 export default function HomePage(props) {
 let fname = props.navigation.getParam('name')
-
+let div_2 = document.getElementById("threejscontainer")
+div_2.style.marginLeft = '100px'
 const [name,setName] = useState(fname)
 const [folderfield,setFolderField] = useState('')
 const [update,setUpdated] = useState(0)
@@ -25,9 +26,8 @@ useEffect(async()=>{
 console.log(true,name)
 },[update])
   return (
-    <SafeAreaProvider style={{backgroundColor:'white'}}>
-      <Particle_Background />
-        <div style={{marginLeft:600,display:'inline-block'}}>
+    <SafeAreaProvider style={{backgroundColor:'black'}}>
+        <div id='container' style={{marginLeft:400,display:'inline-block'}}>
             <div style={{"display":"inline-block","margin":"20px"}}>
             <TextInput type='text' placeholder='folder name' style={{borderWidth:4,color:'white'}} onChangeText={(data)=>{setFolderField(data);console.log(folderfield)
             }}/>
@@ -45,10 +45,10 @@ console.log(true,name)
               setFolderField("");
               }}>Create folder</button>
             </div>
-            <div style={{"display":"inline-block","margin":"20px"}}>{name}</div>
+            <div style={{"display":"inline-block","margin":"20px","color":'white'}}>{name}</div>
          
         </div>    
-        <div style={{marginTop:50,'display':'inline-block'}}>
+        <div style={{marginTop:50,'display':'inline-block','backgroundColor':'black'}}>
         {
                folderdata.map((data,index)=>{
                  return(

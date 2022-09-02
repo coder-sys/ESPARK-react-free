@@ -27,12 +27,11 @@ export default function FolderContent(props){
 
     return(
         <SafeAreaProvider>
-                        <Particle_Background />
 
             <div style={{display:'flex',marginTop:'20px',marginLeft:'40px'}}>
 
             <div style={{padding:'10px'}}>
-                <button style={{backgroundColor:'#3275a6'}} onClick={async()=>{
+                <button style={{backgroundColor:"#3275A6",marginLeft:130,height:50,width:100,border:'none',borderRadius:10}} onClick={async()=>{
                     
   let emailandlastname = await fetch(`http://localhost:8000/get_last_name_and_email/${name}`)
   emailandlastname = await emailandlastname.json()
@@ -72,7 +71,7 @@ export default function FolderContent(props){
                
                 
                 <div style={{padding:'10px'}}><TextInput type='text' placeholder='Google search' style={{padding:15,marginLeft:100,borderWidth:2,color:'white'}} onChangeText={(e)=>(setGoogleSearch(e))}/>
-                <button style={{backgroundColor:'#3275a6'}} onClick={async()=>{
+                <button style={{backgroundColor:"#3275A6",marginLeft:130,height:50,width:100,border:'none',borderRadius:10}} onClick={async()=>{
 let api = await fetch(`http://localhost:8000/get_google_content/${googlesearch}`)
 api = await api.json()
 console.log(api['names'],api.urls)
@@ -125,7 +124,7 @@ console.log(retrievegoogledata1,retrievegoogledata2)
 
 
                 <div style={{padding:'10px'}}><TextInput type='text' placeholder='Youtube search' style={{padding:15,marginLeft:100,borderWidth:2,color:'white'}} onChangeText={(e)=>(setYoutubeSearch(e))}/>
-                <button style={{backgroundColor:'#3275a6'}} onClick={async()=>{
+                <button style={{backgroundColor:"#3275A6",marginLeft:130,height:50,width:100,border:'none',borderRadius:10}} onClick={async()=>{
                 setUpdated(updated+1)
                 let api = await fetch(`http://localhost:8000/get_youtube_data/${youtubesearch}`)
                 api = await api.json()
