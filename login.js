@@ -26,6 +26,9 @@ export default function Login(props){
                   setAccess("Granted")
                   props.navigation.navigate('HomePage',{name:firstname_google})
                 }
+                else{
+                  alert('Username not found')
+                }
       
                 
                 console.log(access)
@@ -57,7 +60,7 @@ export default function Login(props){
           <GoogleLogin 
       clientId={'615921346526-8gs4b74dja97fje48tv2o459a6g7e9ns.apps.googleusercontent.com'}
       onSuccess={(res)=>loginwithgoogle(res.profileObj['name'])}
-      onFailure={(res)=>alert('had trouble signing in,please try again')}
+      onFailure={(res)=>alert('had trouble logging in,please try again')}
       cookiePolicy={'single_host_origin'}
       isSignedIn={false}
 /></div><br></br><br></br>
@@ -76,7 +79,7 @@ export default function Login(props){
                   alert('Incorrect Password')
                 }
                 console.log(access)
-        }}><Text>Log in (Triple click)</Text></button><br></br><br></br>
+        }}><Text>Log in</Text></button><br></br><br></br>
         <Text></Text>
             </div>
             </View>

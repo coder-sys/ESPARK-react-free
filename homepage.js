@@ -23,13 +23,14 @@ useEffect(async()=>{
   console.log(api.data)
   setFolderData(api.data)
   console.log(folderdata)
-console.log(true,name)
+console.log(true,name+emailandlastname['lastname']+emailandlastname['email'])
 },[update])
   return (
     <SafeAreaProvider style={{backgroundColor:'black'}}>
         <div id='container' style={{marginLeft:400,display:'inline-block'}}>
             <div style={{"display":"inline-block","margin":"20px"}}>
-            <TextInput type='text' placeholder='folder name' style={{borderWidth:4,color:'white'}} onChangeText={(data)=>{setFolderField(data);console.log(folderfield)
+              <div style={{'display':'inline'}}>
+            <TextInput type='text' placeholder='folder name' style={{padding:15,marginLeft:100,borderWidth:2,backgroundColor:'white',color:'black'}} onChangeText={(data)=>{setFolderField(data);console.log(folderfield)
             }}/>
             <button style={{backgroundColor:"#3275A6",height:30,width:100,border:'none',borderRadius:10}} onClick={async()=>{
               setUpdated(update+1)
@@ -44,8 +45,10 @@ console.log(true,name)
               console.log(api2)
               setFolderField("");
               }}>Create folder</button>
+                          <div style={{"display":"inline-block","marginLeft":"20px","color":'white'}}>{name}</div>
+
+              </div>
             </div>
-            <div style={{"display":"inline-block","margin":"20px","color":'white'}}>{name}</div>
          
         </div>    
         <div style={{marginTop:50,'display':'inline-block','backgroundColor':'black'}}>
